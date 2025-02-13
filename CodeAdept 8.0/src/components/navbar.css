@@ -1,0 +1,123 @@
+:root {
+    --header-height: 3.5rem;
+    --first-color: hsl(28, 88%, 62%);
+    --title-color: hsl(0, 0%, 95%);
+    --text-color: hsl(0, 0%, 75%);
+    --body-color: hsl(0, 0%, 6%);
+    --body-font: "Montserrat", sans-serif;
+    --second-font: "Dancing Script", cursive;
+    --h2-font-size: 1.25rem;
+    --small-font-size: 0.813rem;
+    --font-semi-bold: 600;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+  body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    font-family: var(--body-font);
+  }
+  
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000; /* Set background color to black */
+    z-index: var(--z-fixed);
+  }
+  
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--header-height);
+    padding: 0 1rem; /* Added padding */
+  }
+  
+  .nav__logo {
+    color: var(--first-color);
+    font-size: var(--h2-font-size);
+    font-family: var(--second-font);
+  }
+  
+  .nav__toggle,
+  .nav__close {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    cursor: pointer;
+  }
+  
+  .nav__list {
+    display: flex; /* Align items in a row */
+    justify-content: flex-start; /* Align links to the left */
+    align-items: center; /* Center items vertically */
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+  }
+  
+  .nav__item {
+    margin-right: 1.5rem; /* Space between items */
+  }
+  
+  .nav__link {
+    color: white; /* Set link color to white */
+    font-weight: var(--font-semi-bold);
+    transition: color 0.4s;
+  }
+  
+  .nav__link:hover {
+    color: orange; /* Change hover color */
+  }
+  
+  .show-menu {
+    right: 0;
+  }
+  
+  /* Mobile Styles */
+  @media screen and (max-width: 1150px) {
+    .nav__menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      background-color: hsla(0, 0%, 6%, 0.9);
+      width: 80%;
+      height: 100%;
+      padding: 6rem 3rem 0;
+      transition: right 0.4s;
+    }
+  
+    .nav__list {
+      flex-direction: column; /* Stacked layout for mobile */
+      align-items: flex-start; /* Align items to the start */
+      row-gap: 1.5rem; /* Space between nav links */
+    }
+  
+    .nav__item {
+      margin: 0; /* Remove margin on mobile */
+    }
+  
+    .nav__close {
+      display: flex; /* Show close button on mobile */
+      justify-content: flex-end; /* Align close button to the right */
+    }
+  }
+  
+  @media screen and (min-width: 1150px) {
+    .nav__menu {
+      display: flex; /* Show menu on larger screens */
+      position: static; /* Reset position for larger screens */
+      flex-direction: row; /* Horizontal layout */
+    }
+  
+    .nav__toggle {
+      display: none; /* Hide toggle button on larger screens */
+    }
+  
+    .nav__close {
+      display: none; /* Hide close button on larger screens */
+    }
+  }
+  

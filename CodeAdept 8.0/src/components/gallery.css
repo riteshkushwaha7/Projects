@@ -1,0 +1,253 @@
+/* Main gallery container */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../assets/font/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+
+/* Past winners section */
+.winners {
+  margin-bottom: 20px;
+}
+
+.line p{
+  font-size: 2vw;
+  font-family: "CustomFont";
+}
+
+.winners-txt {
+  width: 35vw;
+}
+
+/* Carousel items */
+.slide {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.winner-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #303030;
+  font-family: "CustomFont";
+}
+
+.slide .winner-detail {
+  width: 100%;
+  margin: 5vw;
+}
+
+.winner-detail img{
+  padding: 4vw;
+  border-radius: 50%;
+}
+
+.winner-detail p, .winner-detail h5{
+  text-align: center;
+}
+
+/* Background image container */
+.gallery-bg {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+  flex-direction: column;
+  position: relative; /* To allow positioning of child elements */
+}
+
+.gallery-bg img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  z-index: 1; /* Background image layer */
+}
+
+/* Text over gallery background */
+.gallery-txt {
+  position: absolute;
+  top: -5%; 
+  left: 50%;
+  bottom: 40%;
+  transform: translateX(-50%);
+  width: 50vw;
+  height: auto;
+  margin-bottom: 20px;
+  z-index: 2; /* Appears over the background */
+  text-align: center;
+}
+
+/* Photo gallery slider strip */
+.gallery-strip {
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 50%; 
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* Appears over the background */
+  flex-direction: column;
+}
+
+.gallery-strip img {
+  height: 28vw;
+  /* width: 100vw; */
+  /* bottom: 30%; */
+}
+
+/* .winner-detail {
+  color: #303030;
+  font-family: "CustomFont";
+} */
+
+
+
+/* Slider images */
+.slider-image {
+  max-width: 800px; /* Adjust size as needed */
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 1;
+
+}
+
+.slider-image:nth-child(1) {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slider-image:not(:nth-child(1)) {
+  z-index: 0;
+}
+
+/* Optional fade animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Line section */
+.line {
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+.line p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 2vw;
+}
+
+/* Register button styling */
+.btn {
+  margin-top: 20px;
+}
+
+.btn button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 250px;
+  height: auto;
+}
+
+.btn button:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .gallery-bg {
+    width: 90%;
+  }
+
+  .gallery-txt {
+    width: 50vw;
+  }
+
+  .slider-image {
+    width: 70%;
+  }
+
+  .btn img {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-bg {
+    width: 100%;
+  }
+
+  .gallery-txt {
+    width: 70%;
+  }
+
+  .slider-image {
+    max-width: 600px;
+  }
+
+  .btn img {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .winners-txt {
+    width: 60vw;
+  }
+
+  .gallery-txt {
+    width: 70%;
+  }
+
+  .slider-image {
+    max-width: 50vw;
+  }
+
+  .btn img {
+    width: 40vw;
+  }
+  .line p{
+    font-size: 5vw;
+    font-family: "CustomFont";
+  }
+}
+
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(45deg, #7DBBFC, #AFDAFB, #C7EBFD),
+  url('../assets/img/clouds.svg') repeat-x; /* Use repeat-x to stretch clouds horizontally */
+  background-size: 250%, auto; /* Make clouds larger */
+  background-position: center; /* Center the clouds */
+}
+
+
+

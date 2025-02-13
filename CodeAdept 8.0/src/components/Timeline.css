@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../assets/font/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'CustomFont';
+}
+
+.timeline {
+  background: linear-gradient(135deg, #7DBBFC, #AFDAFB, #C7EBFD);
+  min-height: 100vh;
+  padding: 100px 15px;
+  font-family: 'CustomFont';
+}
+
+.timeline-container {
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+}
+
+.timeline h2{
+  color: #303030;
+}
+
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  width: 4px; /* Line width */
+  height: 100%;
+  background-color: #ffffff; /* Line color */
+  left: calc(50% - 2px); /* Center the line */
+  z-index: 0; /* Ensure it's behind other content */
+}
+
+.timeline-item {
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+  padding: 0 15px; /* Add padding for better spacing */
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  padding-left: calc(50% + 30px);
+}
+
+.timeline-date {
+  font-size: 1.5vw;
+  color: #303030;
+  margin: 6px 0 15px;
+  z-index: 1; /* Ensure it's above the line */
+  position: relative; /* Ensure proper stacking context */
+}
+
+.timeline-event {
+  background-color: #303030;
+  padding: 15px; 
+  border-radius: 1.5vw;
+  border: white solid 2px;
+  position: relative;
+  z-index: 2; /* Ensure it's above the line */
+}
+
+.timeline-event h3 {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.timeline-event p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .timeline-container::before {
+    left: 7px;
+    width: 2px; /* Adjust line width for mobile */
+  }
+  .timeline-item:nth-child(odd) {
+    padding-right: 0;
+    text-align: left;
+  }
+  .timeline-item:nth-child(even) {
+    padding-left: 37px;
+  }
+  .timeline-date{
+    font-size: 5vw;
+  }
+}
+@media  (max-width: 480px) {
+  .timeline-date{
+    font-size: 5vw;
+  }
+}
+
+.timeline {
+  background: linear-gradient(135deg, #7DBBFC, #AFDAFB, #C7EBFD),
+              url('../assets/img/clouds.svg') center top / 100% 100px repeat-x; /* Stretch clouds horizontally */
+  min-height: 100vh;
+  padding: 100px 15px;
+  font-family: 'CustomFont';
+  background-attachment: fixed; /* Keep clouds in place on scroll */
+}

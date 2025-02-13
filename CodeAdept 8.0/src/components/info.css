@@ -1,0 +1,363 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('../assets/font/MinecraftRegular-Bmg3.otf') format('opentype');
+}
+
+/* Overall Info container */
+
+/* body{
+  background-image: url("../assets/img/c1bg.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+} */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 2vw; /* Padding with vh/vw for flexible spacing */
+  background: linear-gradient(45deg, #7DBBFC, #AFDAFB, #C7EBFD);  
+
+  color: #ffffff;
+}
+
+/* Info Container for mission and vision */
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80vw;
+  margin-bottom: 5vh;
+  flex-direction: row;
+}
+
+/* Mission Section */
+.mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45vw;
+}
+
+.mission-txt {
+  width: 25vw;
+}
+
+.mission-box {
+  width: 35vw;
+  margin-top: 2vw;
+}
+
+/* Vision Section */
+.Vision {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45vw;
+  margin-left: 5vw;
+  margin-top: 18vw;
+}
+
+.vision-txt {
+  width: 20vw;
+  /* margin-bottom: 2vw; */
+}
+
+.vision-box {
+  width: 35vw;
+}
+
+.info-container .info-text{
+  height: 15vw;
+    padding: .8vw;
+    border-radius: 2.5vw;
+    border: solid white .2vw;
+    text-align: center;
+    font-size: 1.5vw;
+    background-color: #303030;
+    font-family: 'CustomFont';
+}
+
+/* ********************Middle section (Competition Overview)************* */
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh 0;
+  /* position: relative; */
+  /* font-size: 5vw; */
+}
+
+.middle-txt {
+  height: 7.3vw;
+  margin-bottom: 2vw;
+}
+
+.middle-box {
+  width: 75vw;
+  border: solid white 2px;
+  border-radius: 1.3vw;
+}
+
+/* **********************Round Section********************************** */
+
+.rounds {
+  margin-top: 4vw;
+}
+
+
+.round-1, .round-2, .round-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 5vh;
+}
+
+.round-txt {
+  width: 15vw;
+  position: absolute;
+  top: -4vh;
+}
+
+.round-txt-1, .round-txt-2, .round-txt-3 {
+  width: 8vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.round-box-1, .round-box-2, .round-box-3 {
+  width: 40vw;
+  margin-top: 3vh;
+  border-radius: 1.8vw;
+}
+
+.rounds .info-text {
+  color: #fff;
+  width: 70vw;
+  font-family: 'CustomFont';
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #303030;
+  padding: .5vw;
+  border-radius: 1.5vw;
+  border: solid white .2vw;
+}
+
+
+.middle .info-text {
+    color: #fff;
+    width: 78vw;
+    font-family: 'CustomFont';
+    font-size: 1.5vw;
+    text-align: center;
+    background-color: #303030;
+    padding: .5vw;
+    border-radius: 1.5vw;
+    border: solid white .2vw;
+}
+
+/* Media Queries for responsiveness */
+
+/* For screens max-width 1024px */
+@media (max-width: 1024px) {
+  .info-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .mission, .Vision {
+    width: 90vw;
+    /* margin-bottom: 3vh; */
+    margin-top: 3vw;
+    margin-left: 0vw;
+  }
+
+  .mission-txt {
+    width: 25vw;
+  }
+
+  .vision-txt {
+    width: 20vw;
+  }
+
+  .mission-box, .vision-box {
+    width: 40vw;
+  }
+
+  .middle-txt{
+    height: 7.3vw;
+  }
+
+  .middle-box {
+    width: 75vw;
+    border-radius: 1.5vw;
+    position: relative;
+  }
+
+  
+  
+
+  .round-txt {
+    width: 12vw;
+  }
+
+  .round-txt-1, .round-txt-2, .round-txt-3 {
+    width: 7vw;
+  }
+
+  .round-box-1, .round-box-2, .round-box-3 {
+    width: 75vw;
+  }
+}
+
+/* For screens max-width 768px */
+@media (max-width: 768px) {
+  .info-container {
+    flex-direction: column;
+  }
+
+  .mission, .Vision {
+    width: 100vw;
+    margin-bottom: 3vh;
+  }
+
+  .mission-txt {
+    width: 25vw;
+  }
+
+  .vision-txt {
+    width: 20vw;
+  }
+
+  .mission-box, .vision-box {
+    width: 45vw;
+  }
+
+  .middle-txt, .middle-box {
+    width: 85vw;
+  }
+
+  .round-txt {
+    width: 10vw;
+  }
+
+  .round-txt-1, .round-txt-2, .round-txt-3 {
+    width: 6vw;
+  }
+
+  .round-box-1, .round-box-2, .round-box-3 {
+    width: 85vw;
+  }
+}
+
+/* For screens max-width 480px */
+@media (max-width: 480px) {
+  .mission, .Vision {
+    width: 100vw;
+    margin-bottom: 3vh;
+  }
+
+  .mission-txt{
+    width: 40vw;
+  }
+  .vision-txt {
+    width: 35vw;
+  }
+
+  .mission-box, .vision-box {
+    width: 50vw;
+  }
+
+  .middle-txt {
+     width: 80vw;
+     height: 15vw;
+    
+  }
+
+  .middle-box {
+     width: 90vw; 
+     /* height: 15vw;  */
+  }
+
+
+  .round-txt-1, .round-txt-2, .round-txt-3 {
+    width: 17vw;
+  }
+  
+
+  .round-box-1, .round-box-2, .round-box-3 {
+    width: 85vw;
+  }
+
+  .middle .info-text {
+    height: 20vw;
+    padding: .8vw;
+    border-radius: 2.5vw;
+    border: solid white .3vw;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.rounds .info-text{
+  height: 28vw;
+    padding: .8vw;
+    border-radius: 2.5vw;
+    border: solid white .3vw;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.info-container .info-text{
+  width: 75vw;
+  height: 20vw;
+  font-size: 2.5vw;
+}
+}
+
+
+
+/* *********************************************************** */
+
+.mission, .Vision, .middle {
+  position: relative;
+}
+
+/* Cloud background for Info Section */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 2vw;
+  background: linear-gradient(45deg, #7DBBFC, #AFDAFB, #C7EBFD), 
+              url('../assets/img/cloud1.svg') repeat,
+              url('../assets/img/cloudbg1.svg') repeat,
+              url('../assets/img/clouds.svg') repeat;
+  background-position: top left, center, bottom right; /* Customize positioning */
+  background-size: 150%, 120%, 150%; /* Increase cloud size */
+  color: #ffffff;
+}
+
+/* Cloud background for Middle Section */
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5vh 0;
+  background: url('../assets/img/cloud1.svg') repeat,
+              url('../assets/img/cloudbg1.svg') repeat,
+              url('../assets/img/clouds.svg') repeat;
+  background-position: top left, center, bottom right;
+  background-size: 150%, 120%, 150%; /* Increase cloud size */
+}
+
+/* Cloud background for Rounds Section */
+.rounds {
+  margin-top: 4vw;
+  background: url('../assets/img/cloud1.svg') repeat,
+              url('../assets/img/cloudbg1.svg') repeat,
+              url('../assets/img/clouds.svg') repeat;
+  background-position: top left, center, bottom right;
+  background-size: 150%, 120%, 150%; /* Increase cloud size */
+}

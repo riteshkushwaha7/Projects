@@ -1,0 +1,56 @@
+/* acss.css */
+.announcement-banner {
+  background: linear-gradient(135deg, #7DBBFC, #AFDAFB, #C7EBFD);  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  overflow: hidden; /* Hide overflow */
+  white-space: nowrap; /* Prevent wrapping */
+  color: #303030;
+  
+}
+.announcement-banner a{
+  /* text-decoration: none; */
+  color: #303030;
+}
+
+.marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite; /* Animation for marquee effect */
+}
+
+.marquee-message {
+  display: inline; /* Ensure messages are inline */
+  padding-right: 50px; /* Space between messages */
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%); /* Start from right */
+  }
+  100% {
+    transform: translateX(-100%); /* End to left */
+  }
+}
+
+/* Responsive styles (optional) */
+@media (min-width: 1024px) {
+  .announcement-banner {
+    font-size: 18px;
+    padding: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .announcement-banner {
+    font-size: 17px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 767px) {
+  .announcement-banner {
+    font-size: 14px;
+    padding: 8px;
+    background: linear-gradient(45deg, #7DBBFC, #AFDAFB, #C7EBFD);  }
+}
